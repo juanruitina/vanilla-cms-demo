@@ -12,9 +12,9 @@ public_folder: "/static/img"
 local_backend: true
 # publish_mode: editorial_workflow
 collections:
-  - label: "Blog"
-    name: "blog"
-    folder: "src/posts"
+  - label: "Component"
+    name: "component"
+    folder: "src/components"
     create: true
     editor:
       preview: false
@@ -23,6 +23,14 @@ collections:
       - { label: "Description", name: "description", widget: "string" }
       - { label: "Author", name: "author", widget: "string" }
       - { label: "Publish Date", name: "date", widget: "datetime" }
+      - label: "Status"
+        name: "status"
+        widget: "select"
+        options:
+          - { label: "braindump", value: "Braindump" }
+          - { label: "draft", value: "Draft" }
+          - { label: "review", value: "In review" }
+          - { label: "stable", value: "Stable" }
       - { label: "Body", name: "body", widget: "markdown" }
       - widget: select
         label: "tags"
